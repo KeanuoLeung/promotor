@@ -1,0 +1,8 @@
+<!--miniprogram/pages/scrollpro/scrollpro.wxml-->
+<view>
+	<view class="intro" id="comment1">
+		<text wx:for="{{article}}" wx:key="{{item.index}}" id="{{item.index}}" space="nbsp" class="char {{item.pass ? 'charpass' : 'char'}} {{item.class}}">{{item.char}}</text>
+	</view>
+	<van-slider wx:if="{{showBar}}" class="slider" value="{{timePerChar}}" min="10" max="100" bindchange="sliderchange" />
+	<view class="displaytime">{{displayTime}}</view>
+</view>

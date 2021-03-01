@@ -1,0 +1,197 @@
+/**index.wxss**/
+
+page {
+  background: #626cf5;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: fixed;
+  overflow-x: hidden;
+}
+
+.header {
+  width: 100vw;
+  font-size: 40rpx;
+  font-weight: bold;
+}
+
+.title {
+  color: #fff;
+  margin-top: 30rpx;
+  margin-left: 5vw;
+  margin-bottom: 20rpx;
+}
+
+.search {
+  width: 90vw;
+  left: 5vw;
+}
+
+.content {
+  background-color: #f0f8ff;
+  margin-top: 20rpx;
+  height: 100vh;
+  width: 100vw;
+  border-radius: 80rpx;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding-top: 20rpx;
+  overflow-y: scroll;
+  transition: all 1s;
+}
+
+.tab-container {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  height: 120rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #f0f8ff;
+  box-shadow: 3rpx 3rpx 3rpx;
+}
+
+.menuitem {
+  position: relative;
+  width: 600rpx;
+  height: 200rpx;
+  margin: 15rpx;
+  margin-top: 60rpx;
+  border-radius: 30rpx;
+  background-color: #fc89a1;
+}
+
+.menuicon {
+  width: 140rpx;
+  height: 140rpx;
+  position: absolute;
+  top: 30rpx;
+  left: 30rpx;
+  background-color: #626cf5;
+  border-radius: 25rpx;
+}
+
+.menutitle {
+  color: white;
+  position: absolute;
+  font-size: 40rpx;
+  top: 40rpx;
+  left: 200rpx;
+  font-weight: bold;
+}
+
+.menucontent {
+  position: absolute;
+  color: white;
+  left: 200rpx;
+  font-size: 30rpx;
+  bottom: 40rpx;
+  font-weight: 200;
+}
+
+.menuhover {
+  opacity: 0.6;
+}
+
+.historycon {
+  display: flex;
+  width: 590rpx;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 50rpx;
+  padding-left: 80rpx;
+  padding-right: 80rpx;
+  padding-bottom: 500rpx;
+  overflow-x: hidden;
+}
+
+.historycard {
+  width: 200rpx;
+  height: 250rpx;
+  margin-bottom: 20rpx;
+  background-color: white;
+  color: #282c31;
+  border: solid 3px #282c31;
+  border-radius: 30rpx;
+  padding: 35rpx;
+  overflow: hidden;
+}
+
+.settingpage {
+  margin-top: 50rpx;
+  border-radius: 0;
+}
+
+.avatar {
+  width: 150rpx;
+  height: 150rpx;
+  margin-left: 50rpx;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.userinfo {
+  width: 100vw;
+  height: 200rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  background: white;
+  border: none;
+  margin-top: 0;
+}
+
+.usernick {
+  font-size: 40rpx;
+  margin-left: 30rpx;
+}
+
+.settingline {
+  height: 100rpx;
+  width: 700rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  padding-left: 50rpx;
+  font-weight: 200;
+  font-size: 30rpx;
+}
+
+.pop {
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.detail {
+  align-self: center;
+  font-size: 28rpx;
+  margin-right: 50rpx;
+}
+
+.type {
+  font-size: 40rpx;
+  font-weight: bold;
+  margin-bottom: 10rpx;
+}
+
+.searchbar {
+  display: flex;
+  flex-direction: row;
+
+}
+
+.scan {
+  margin-left: -5rpx;
+}

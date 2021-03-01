@@ -1,0 +1,51 @@
+/* miniprogram/pages/scrollpro/scrollpro.wxss */
+page {
+  background-color: black;
+}
+
+.intro {
+  text-align: center;
+  margin-top: 20rpx;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: black;
+}
+
+.enter {
+  width: 750rpx;
+  height: 10rpx;
+}
+
+.bg {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  overflow-y: scroll;
+}
+
+.char {
+  color: white;
+  font-size: 70rpx;
+  transition: all 0.5s;
+}
+
+.charpass {
+  color: paleturquoise;
+  filter: blur(5rpx);
+}
+
+.slider {
+  position: fixed;
+  bottom: 100rpx;
+  width: 690rpx;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+}
+
+.displaytime {
+  position: fixed;
+  font-size: 20rpx;
+  color: white;
+  top: 0;
+  right: 20rpx;
+}

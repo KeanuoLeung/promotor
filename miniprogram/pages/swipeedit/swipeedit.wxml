@@ -1,0 +1,11 @@
+<!--miniprogram/pages/swipeedit/swipeedit.wxml-->
+<view class="content">
+	<view class="startbutton" hover-class="opa" bindtap="goplay">开始播放</view>
+	<view wx:key="id" wx:for="{{cards}}" class="textsection">
+		<textarea id="{{item.id}}" class="textarea" value="{{item.data}}" placeholder="请输入内容" bindinput="textchange"></textarea>
+	</view>
+	<view class="buttonrow">
+		<van-button round icon="close" type="danger" bindtap="deletecard" />
+		<van-button round icon="add-o" type="primary" bindtap="addcard" />
+	</view>
+</view>

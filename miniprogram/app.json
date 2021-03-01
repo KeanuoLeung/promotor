@@ -1,0 +1,23 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/scrolledit/scrolledit",
+    "pages/scrollpro/scrollpro",
+    "pages/swipeedit/swipeedit",
+    "pages/swipeshow/swipeshow"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "云开发 QuickStart",
+    "navigationBarTextStyle": "black"
+  },
+  "plugins": {
+    "QCloudAIVoice": {
+      "version": "1.2.0",
+      "provider": "wx3e17776051baf153"
+    }
+  },
+  "sitemapLocation": "sitemap.json"
+}

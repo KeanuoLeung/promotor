@@ -1,0 +1,19 @@
+/* miniprogram/pages/swipeshow/swipeshow.wxss */
+.swiper {
+  width: 100vw;
+  position: relative;
+  height: 100vh;
+  
+}
+
+.page {
+  width: 750rpx;
+  background-color: black;
+  height: 100%;
+  display: flex;
+  word-break:break-all;
+  overflow-y: scroll;
+  color: white;
+  font-size: 70rpx;
+  transition: all 0.5s;
+}

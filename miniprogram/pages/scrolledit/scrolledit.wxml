@@ -1,0 +1,16 @@
+<!--miniprogram/pages/scrolledit/scrolledit.wxml-->
+<view class="content">
+	<view class="startbutton" hover-class="opa" bindtap="goplay">开始播放</view>
+	<view class="textsection">
+		<textarea class="textarea" value="{{textdata}}" bindblur="bindTextAreaBlur" placeholder="请输入内容" bindinput="textchange" maxlength="-1"/>
+		</view>
+		<view class="options">
+			<van-cell-group title="提词配置">
+			<van-cell title="图像文字识别" is-link />
+				<van-cell center title="语音提词">
+					<van-switch slot="right-icon" checked="{{ checked }}" bind:change="onChange" size="50rpx" />
+				</van-cell>
+				
+			</van-cell-group>
+		</view>
+	</view>

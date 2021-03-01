@@ -1,0 +1,70 @@
+<!--index.wxml-->
+<view class="page">
+	<view class="header">
+		<view class="title" style="padding-top: {{statusBarHeight}}px;">Kill Stagnantly</view>
+
+<view class="searchbar">
+		<van-search class="search" style="{{active === 1 ? 'display: none;': ''}}" shape="round" background="#626cf5" placeholder="请输入搜索关键词" />
+		<van-icon class="scan" name="scan" style="{{active === 1 ? 'display: none;': ''}}" color="white" size="30px"/>
+		</view>
+	</view>
+	<view class="content" style="{{active === 1 ? 'border-radius: 0;padding-top: 0;': ''}}">
+		<view wx-if="{{active === 0}}">
+			<view class="menuitem" hover-class="menuhover" bindtap="gotoscroll" style="background:#807feb;">
+				<image class="menuicon" src="../../images/icona.png"></image>
+				<view class="menutitle">滚动提词</view>
+				<view class="menucontent">语音智能控制文字进度</view>
+			</view>
+			<view class="menuitem" hover-class="menuhover" bindtap="gotoswipe">
+				<image class="menuicon" src="../../images/iconb.png"></image>
+				<view class="menutitle">卡片提词</view>
+				<view class="menucontent">滑动卡片切换到下一张</view>
+			</view>
+			<view class="menuitem" hover-class="menuhover" style="background:#ece8f7;" bindtap="goempty">
+				<image class="menuicon" src="../../images/iconc.png"></image>
+				<view class="menutitle" style="color:#333333;">掌上弹幕</view>
+				<view class="menucontent" style="color:#333333;">发射弹幕，biu biu biu</view>
+			</view>
+			<van-divider contentPosition="center">更多功能敬请期待</van-divider>
+		</view>
+		<view wx-if="{{active === 2}}">
+			<view class="historycon">
+				<view class="historycard" wx:for="{{history}}" bindtap="test" id="{{item.date}}" hover-class="menuhover" bindlongtap="delete">
+				<view class="type">{{item.type}}提词</view>
+					{{item.value}}
+				</view>
+			</view>
+		</view>
+		<view wx-if="{{active === 1}}">
+			<view class="userinfo">
+				<view class="avatar">
+					<open-data type="userAvatarUrl"></open-data>
+				</view>
+				<view class="usernick">
+					<open-data type="userNickName"></open-data>
+				</view>
+			</view>
+			<view class="settingline" bindtap="showpicker">
+				<view>背景颜色</view>
+				<view class="detail"></view>
+			</view>
+			<view class="settingline" bindtap="showpicker">
+				<view>文字颜色</view>
+				<view class="detail"></view>
+			</view>
+			<view class="settingline" bindtap="showpicker">
+				<view>已读颜色</view>
+				<view class="detail"></view>
+			</view>
+
+		</view>
+	</view>
+	<!--<view class="content settingpage" wx-if="{{active === 2}}"></view>-->
+	<van-tabbar active="{{ active }}" bind:change="onChange" active-color="#626cf5" inactive-color="#333">
+		<van-tabbar-item icon="flag-o">功能</van-tabbar-item>
+		<van-tabbar-item icon="notes-o" wx-if="{{hashistory}}">历史</van-tabbar-item>
+		<van-tabbar-item icon="setting-o">设置</van-tabbar-item>
+	</van-tabbar>
+
+	<color-picker bindchangeColor="pickColor" initColor="{{rgb}}" show="{{popShow}}" />
+</view>

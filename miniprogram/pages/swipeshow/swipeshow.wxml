@@ -1,0 +1,12 @@
+<!--miniprogram/pages/swipeshow/swipeshow.wxml-->
+<view>
+<swiper class="swiper" indicator-dots="{{indicatorDots}}"
+        autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+        <block wx:for="{{background}}" wx:key="*this">
+          <swiper-item>
+            <view class="page">
+            {{item.data}}</view>
+          </swiper-item>
+        </block>
+      </swiper>
+</view>
